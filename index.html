@@ -1,0 +1,1075 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Юридические услуги для частных лиц и бизнеса. Консультации, документы и правовое сопровождение.">
+  <title>Юридические услуги — Малова Александра Михайловна</title>
+  <style>
+    :root {
+      --ink: #172438; --muted: #647184; --paper: #f7f8fa; --white: #fff;
+      --accent: #b58b50; --line: #e5e9ef; --navy2: #223650;
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body { margin: 0; color: var(--ink); background: var(--paper); font-family: Arial, sans-serif; line-height: 1.65; }
+    a { color: inherit; }
+    .wrap { width: min(1100px, calc(100% - 40px)); margin: 0 auto; }
+    header { position: sticky; top: 0; z-index: 10; background: rgba(255,255,255,.96); border-bottom: 1px solid var(--line); backdrop-filter: blur(10px); }
+    .nav { min-height: 72px; display: flex; justify-content: space-between; align-items: center; gap: 24px; }
+    .brand { font-family: Georgia, serif; font-size: 19px; font-weight: bold; text-decoration: none; }
+    nav { display: flex; gap: 22px; flex-wrap: wrap; }
+    nav a { text-decoration: none; color: #475569; font-size: 13px; }
+    nav a:hover, .text-link:hover { color: var(--accent); }
+    .hero { padding: 92px 0 88px; background: var(--ink); color: white; }
+    .eyebrow { color: #d6b47e; font-size: 12px; letter-spacing: .16em; text-transform: uppercase; }
+    h1,h2,h3 { font-family: Georgia, "Times New Roman", serif; font-weight: normal; }
+    h1 { max-width: 760px; font-size: clamp(38px, 6vw, 62px); line-height: 1.12; margin: 18px 0; }
+    .hero p { max-width: 650px; color: #d2d9e3; font-size: 17px; }
+    .btn { display: inline-block; margin-top: 20px; padding: 13px 20px; background: var(--accent); color: white; text-decoration: none; border: 0; border-radius: 3px; font-size: 14px; cursor: pointer; }
+    section { padding: 72px 0; }
+    .section-head { max-width: 690px; margin-bottom: 30px; }
+    h2 { margin: 0 0 12px; font-size: 36px; }
+    .lead { color: var(--muted); margin: 0; }
+    .about-grid { display: grid; grid-template-columns: 1.1fr .9fr; gap: 44px; align-items: center; }
+    .portrait { min-height: 310px; background: linear-gradient(145deg,#dce2e9,#f0ede7); border: 1px solid var(--line); display: grid; place-items: center; color: #697789; text-align: center; padding: 24px; }
+    .portrait span { max-width: 220px; font: 14px/1.6 Arial,sans-serif; }
+    .about-copy p { color: #4e5b6c; }
+    .facts { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 22px; }
+    .fact { border: 1px solid var(--line); background: white; padding: 9px 12px; color: #536174; font-size: 13px; }
+    .services { background: #eef1f5; }
+    .cards { display: grid; grid-template-columns: repeat(3,1fr); gap: 16px; }
+    .card { background: white; border: 1px solid var(--line); padding: 24px; }
+    .card h3 { font-size: 22px; margin: 0 0 9px; }
+    .card p { color: var(--muted); font-size: 14px; min-height: 68px; }
+    .price { font-size: 20px; color: var(--ink); font-weight: bold; }
+    .note { margin-top: 20px; color: var(--muted); font-size: 12px; }
+    .cases { display: grid; grid-template-columns: repeat(2,1fr); gap: 14px; }
+    .case { background: white; border: 1px solid var(--line); padding: 21px 23px; }
+    .case small { color: var(--accent); text-transform: uppercase; letter-spacing: .08em; font-size: 10px; }
+    .case h3 { font-size: 20px; margin: 8px 0; }
+    .case p { color: var(--muted); font-size: 14px; margin: 0 0 12px; }
+    .text-link { color: var(--navy2); font-size: 13px; font-weight: bold; text-decoration: none; }
+    .reviews { background: #eef1f5; }
+    .review-grid { display: grid; grid-template-columns: repeat(2,1fr); gap: 18px; }
+    .review { background: white; border: 1px solid var(--line); padding: 18px; }
+    .review img { width: 100%; height: 240px; object-fit: contain; background: #f5f6f8; border: 1px dashed #cbd3dd; }
+    .review figcaption { color: var(--muted); font-size: 13px; margin-top: 10px; }
+    .contacts-grid { display: grid; grid-template-columns: .85fr 1.15fr; gap: 28px; }
+    .contact-list p { margin: 9px 0; color: #536174; }
+    .contact-list a { color: var(--navy2); text-decoration: none; }
+    .map { min-height: 320px; border: 1px solid var(--line); background: #e9edf1; display: grid; place-items: center; text-align: center; padding: 25px; color: var(--muted); }
+    .map a { color: var(--navy2); }
+    .feedback { background: var(--ink); color: white; }
+    .feedback h2 { color: white; }
+    .feedback .lead { color: #c8d0db; }
+    form { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; max-width: 760px; margin-top: 28px; }
+    input, textarea { width: 100%; padding: 14px; border: 1px solid #526176; background: #223149; color: white; border-radius: 3px; font: 14px Arial,sans-serif; }
+    input::placeholder, textarea::placeholder { color: #b8c2cf; }
+    textarea { grid-column: 1/-1; min-height: 120px; resize: vertical; }
+    .consent { grid-column: 1/-1; color: #c8d0db; font-size: 12px; }
+    .consent a { color: #e1c18e; }
+    form button { justify-self: start; margin-top: 2px; }
+    footer { padding: 24px 0; background: #111c2d; color: #aeb9c8; font-size: 12px; }
+    @media(max-width:760px) {
+      .nav { padding: 14px 0; align-items: flex-start; flex-direction: column; }
+      nav { gap: 12px 17px; }
+      .hero { padding: 65px 0; }
+      section { padding: 54px 0; }
+      .about-grid,.cards,.cases,.review-grid,.contacts-grid { grid-template-columns: 1fr; }
+      .portrait { min-height: 230px; }
+      form { grid-template-columns: 1fr; }
+      textarea,.consent { grid-column: auto; }
+    }
+    .price-list {
+        max-width: 950px;
+        margin: 35px auto 0;
+    }
+
+    .price-category {
+        background: #fff;
+        border: 1px solid #e5e9ef;
+        margin-bottom: 14px;
+        border-radius: 5px;
+        overflow: hidden;
+    }
+
+    .price-category summary {
+        padding: 21px 25px;
+        cursor: pointer;
+        font-family: Georgia, serif;
+        font-size: 20px;
+        color: #172438;
+        font-weight: bold;
+        list-style: none;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 15px;
+    }
+
+    .price-category summary::-webkit-details-marker {
+        display: none;
+    }
+
+    .price-category summary::after {
+        content: "+";
+        color: #b58b50;
+        font-size: 25px;
+        font-family: Arial, sans-serif;
+    }
+
+    .price-category[open] summary::after {
+        content: "−";
+    }
+
+    .price-category summary:hover {
+        background: #f7f8fa;
+    }
+
+    .price-items {
+        padding: 0 25px 15px;
+    }
+
+    .price-item {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 25px;
+        padding: 16px 0;
+        border-top: 1px solid #e5e9ef;
+    }
+
+    .price-item span {
+        color: #536174;
+        font-size: 14px;
+        line-height: 1.6;
+    }
+
+    .price-item strong {
+        color: #172438;
+        white-space: nowrap;
+        font-size: 15px;
+    }
+
+    .price-note {
+        padding: 0 25px 20px;
+        color: #647184;
+        font-size: 13px;
+        margin: 0;
+    }
+
+    @media (max-width: 600px) {
+        .price-category summary {
+            font-size: 17px;
+            padding: 17px;
+        }
+
+        .price-items {
+            padding: 0 17px 12px;
+        }
+
+        .price-item {
+            align-items: flex-start;
+            flex-direction: column;
+            gap: 5px;
+        }
+
+        .price-item strong {
+            color: #b58b50;
+        }
+    }
+
+
+    /* ==========================
+      СЕКЦИЯ "ОБО МНЕ"
+      ========================== */
+
+    .about {
+        padding: 72px 0;
+        background: #fff;
+    }
+
+    /* Используем общий контейнер сайта шириной 1100px */
+    .about .wrap {
+        width: min(1100px, calc(100% - 40px));
+        margin: 0 auto;
+    }
+
+    /* Заголовок */
+    .about .section-head {
+        max-width: 690px;
+        margin-bottom: 30px;
+        text-align: left;
+    }
+
+    .about .section-head h2 {
+        margin: 0 0 12px;
+        font-size: 36px;
+        color: #172438;
+    }
+
+    .about .lead {
+        color: #647184;
+        margin: 0;
+        font-size: 17px;
+    }
+
+    /* Текст и фотография */
+    .about-grid {
+        display: grid;
+        grid-template-columns: minmax(0, 1fr) 320px;
+        gap: 60px;
+        align-items: start;
+    }
+
+    .about-copy {
+        min-width: 0;
+        width: 100%;
+        font-size: 15px;
+        line-height: 1.75;
+        color: #4e5b6c;
+    }
+
+    .about-copy p {
+        margin: 0 0 18px;
+    }
+
+    .about-copy strong {
+        color: #172438;
+    }
+
+    /* Фотография */
+    .about .portrait {
+        width: 100%;
+        max-width: 320px;
+        min-height: auto;
+        margin: 0;
+        padding: 0;
+        border: none;
+        background: none;
+        display: block;
+    }
+
+    .about .portrait img {
+        display: block;
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+        border-radius: 5px;
+        box-shadow: 0 8px 25px rgba(0, 0, 0, 0.10);
+    }
+
+    /* Преимущества */
+    .about-features {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 14px;
+        margin: 30px 0;
+    }
+
+    .about-features > div {
+        display: flex;
+        flex-direction: column;
+        gap: 6px;
+        padding: 17px 13px;
+        background: #f5f3ef;
+        border-radius: 5px;
+    }
+
+    .about-features strong {
+        font-size: 19px;
+        color: #b58b50;
+    }
+
+    .about-features span {
+        font-size: 13px;
+        line-height: 1.5;
+        color: #555d68;
+    }
+
+    /* Заключение */
+    .about-copy .about-final {
+        margin-top: 25px;
+        padding-top: 18px;
+        border-top: 1px solid #e5e0d8;
+        font-size: 15px;
+        line-height: 1.7;
+    }
+
+    /* Планшеты */
+    @media (max-width: 900px) {
+        .about-grid {
+            grid-template-columns: minmax(0, 1fr) 260px;
+            gap: 35px;
+        }
+
+        .about .portrait {
+            max-width: 260px;
+        }
+    }
+
+    /* Телефоны */
+    @media (max-width: 760px) {
+        .about {
+            padding: 54px 0;
+        }
+
+        .about-grid {
+            grid-template-columns: 1fr;
+            gap: 25px;
+        }
+
+        .about-copy {
+            font-size: 15px;
+        }
+
+        .about .portrait {
+            max-width: 420px;
+            justify-self: center;
+            margin: 0 auto;
+        }
+
+        .about-features {
+            grid-template-columns: 1fr;
+            gap: 10px;
+        }
+    }
+
+    /* Форма обратной связи */
+
+    .feedback-form {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 20px;
+        max-width: 850px;
+        margin-top: 35px;
+    }
+
+    .form-field {
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+    }
+
+    .form-field label {
+        color: var(--ink);
+        font-size: 14px;
+        font-weight: 600;
+    }
+
+    .form-field input,
+    .form-field textarea {
+        width: 100%;
+        padding: 15px 16px;
+        border: 1px solid var(--line);
+        border-radius: 4px;
+        background: #fff;
+        color: var(--ink);
+        font: inherit;
+        font-size: 15px;
+        transition: border-color .2s;
+    }
+
+    .form-field input:focus,
+    .form-field textarea:focus {
+        outline: none;
+        border-color: var(--gold);
+    }
+
+    .form-field input::placeholder,
+    .form-field textarea::placeholder {
+        color: #9aa4b2;
+    }
+
+    .form-field textarea {
+        min-height: 145px;
+        resize: vertical;
+    }
+
+    .feedback-form .full-width {
+        grid-column: 1 / -1;
+    }
+
+    .feedback-form .consent {
+        grid-column: 1 / -1;
+        display: flex;
+        align-items: flex-start;
+        gap: 10px;
+        color: var(--muted);
+        font-size: 13px;
+        line-height: 1.6;
+    }
+
+    .feedback-form .consent input {
+        width: 17px;
+        height: 17px;
+        margin-top: 2px;
+        flex-shrink: 0;
+        accent-color: var(--gold);
+    }
+
+    .feedback-form .consent a {
+        color: var(--gold);
+    }
+
+    .feedback-form .form-bottom {
+        grid-column: 1 / -1;
+    }
+
+    .feedback-form button {
+        padding: 15px 28px;
+        background: var(--gold);
+        color: white;
+        border: none;
+        border-radius: 4px;
+        font-size: 15px;
+        font-weight: 600;
+        cursor: pointer;
+        transition: opacity .2s;
+    }
+
+    .feedback-form button:hover {
+        opacity: .85;
+    }
+
+    .feedback-form button:disabled {
+        opacity: .6;
+        cursor: wait;
+    }
+
+    #form-status {
+        margin-top: 12px;
+        font-size: 14px;
+        color: var(--muted);
+    }
+
+    @media (max-width: 600px) {
+        .feedback-form {
+            grid-template-columns: 1fr;
+        }
+
+        .feedback-form .full-width,
+        .feedback-form .consent,
+        .feedback-form .form-bottom {
+            grid-column: 1;
+        }
+
+        .feedback-form button {
+            width: 100%;
+        }
+    }
+
+
+    /* Судебная практика — компактный вариант */
+    .practice-list {
+        width: min(100% - 40px, 1000px);
+        margin: 0 auto;
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 12px;
+    }
+
+    .practice-card {
+      background: var(--white);
+      border: 1px solid var(--line);
+      border-radius: 11px;
+      overflow: hidden;
+      transition: border-color .2s, box-shadow .2s;
+    }
+
+    .practice-card:hover,
+    .practice-card[open] {
+      border-color: rgba(181, 139, 80, .65);
+    }
+
+    .practice-card summary {
+      display: grid;
+      grid-template-columns: 34px 1fr 22px;
+      align-items: center;
+      gap: 14px;
+      padding: 16px 20px;
+      cursor: pointer;
+      list-style: none;
+    }
+
+    .practice-card summary::-webkit-details-marker {
+      display: none;
+    }
+
+    .practice-number {
+      color: var(--gold);
+      font-family: Georgia, serif;
+      font-size: 17px;
+      font-weight: 600;
+      align-self: start;
+      padding-top: 2px;
+    }
+
+    .practice-summary {
+      display: flex;
+      flex-direction: column;
+      gap: 5px;
+      min-width: 0;
+    }
+
+    .practice-category {
+      color: var(--gold);
+      font-size: 10px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: .8px;
+    }
+
+    .practice-title {
+      color: var(--ink);
+      font-size: 15px;
+      line-height: 1.4;
+      font-weight: 600;
+    }
+
+    .practice-result {
+      color: var(--muted);
+      font-size: 12px;
+      line-height: 1.5;
+    }
+
+    .practice-toggle {
+      width: 22px;
+      height: 22px;
+      border: 1px solid var(--line);
+      border-radius: 50%;
+      position: relative;
+    }
+
+    .practice-toggle::before,
+    .practice-toggle::after {
+      content: "";
+      position: absolute;
+      background: var(--gold);
+      width: 8px;
+      height: 1.5px;
+      top: 10px;
+      left: 6px;
+    }
+
+    .practice-toggle::after {
+      transform: rotate(90deg);
+      transition: transform .2s;
+    }
+
+    .practice-card[open] .practice-toggle {
+      background: var(--ink);
+      border-color: var(--ink);
+    }
+
+    .practice-card[open] .practice-toggle::before,
+    .practice-card[open] .practice-toggle::after {
+      background: white;
+    }
+
+    .practice-card[open] .practice-toggle::after {
+      transform: rotate(0);
+    }
+
+    .practice-content {
+      border-top: 1px solid var(--line);
+      margin: 0 20px;
+      padding: 16px 0 20px 48px;
+      max-width: 850px;
+      color: var(--muted);
+      font-size: 14px;
+      line-height: 1.7;
+    }
+
+    .practice-content p {
+      margin: 0 0 12px;
+    }
+
+    .practice-outcome {
+      background: var(--paper);
+      border-left: 3px solid var(--gold);
+      border-radius: 0 6px 6px 0;
+      padding: 12px 16px;
+      margin: 16px 0;
+    }
+
+    .practice-outcome strong {
+      display: block;
+      color: var(--ink);
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: .7px;
+      margin-bottom: 4px;
+    }
+
+    .practice-outcome p {
+      color: var(--ink);
+      margin: 0;
+    }
+
+    .practice-link {
+      color: var(--ink);
+      font-size: 13px;
+      font-weight: 600;
+      text-decoration: none;
+      border-bottom: 1px solid var(--gold);
+      padding-bottom: 3px;
+    }
+
+    .practice-link:hover {
+      color: var(--gold);
+    }
+
+    @media (max-width: 600px) {
+      .practice-list {
+        width: calc(100% - 30px);
+      }
+
+      .practice-card summary {
+        grid-template-columns: 26px 1fr 20px;
+        gap: 10px;
+        padding: 14px;
+      }
+
+      .practice-title {
+        font-size: 14px;
+      }
+
+      .practice-content {
+        margin: 0 14px;
+        padding: 14px 0 18px;
+        font-size: 13px;
+      }
+    }
+  </style>
+</head>
+<body>
+<header>
+  <div class="wrap nav">
+    <a class="brand" href="#">Малова Александра Михайловна · Юрист</a>
+    <nav aria-label="Навигация">
+      <a href="#about">Обо мне</a><a href="#services">Услуги и цены</a>
+      <a href="#cases">Практика</a><a href="#reviews">Отзывы</a><a href="#contacts">Контакты</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <div class="hero">
+    <div class="wrap">
+      <div class="eyebrow">Юридические услуги · Иркутск</div>
+      <h1>Юридические решения для людей и бизнеса</h1>
+      <p>Высокий уровень профессионализма. Индивидуальный подход. Максимальный учет ваших интересов. Гибкая ценовая политика.</p>
+      <a class="btn" href="#contacts">Связаться</a>
+    </div>
+  </div>
+
+
+<section id="about" class="about">
+  <div class="wrap">
+
+    <div class="section-head">
+      <h2>Обо мне</h2>
+      <p class="lead">
+        <strong>Малова Александра Михайловна</strong>
+      </p>
+    </div>
+
+    <div class="about-grid">
+
+      <div class="about-copy">
+
+        <p>
+          В 2001 году окончила факультет гражданского и предпринимательского права БГУ с отличием.
+          С 2001 года опыт работы в юридической сфере, в том числе в должности директора по правовым вопросам.
+          С 2013 года веду частную юридическую практику.
+        </p>
+
+        <p>
+          Оказываю помощь по гражданским, семейным, наследственным, жилищным,
+          трудовым, пенсионным, страховым, административным и иным вопросам.
+        </p>
+
+        <p>Защита прав потребителей, участников долевого строительства, заемщиков.</p>
+
+        <p>
+          Трудовые споры (оспаривание дисциплинарных взысканий и увольнений,
+          признание факта трудовых отношений и т.д.).
+        </p>
+
+        <p>
+          Семейные споры (раздел имущества, алименты, определение места
+          жительства детей и порядка общения).
+        </p>
+
+        <p>
+          Жилищные споры, решение проблем при приватизации, в т.ч. в судебном
+          порядке (признание утратившим право пользования и др.).
+          Сопровождение сделок с недвижимостью.
+        </p>
+
+        <p>Составление и правовой анализ любых договоров.</p>
+
+        <p>Подготовка претензий, исков, жалоб, заявлений.</p>
+
+        <p>Представительство в судах (СОЮ, арбитраж).</p>
+
+        <p>
+          Правовое сопровождение бизнеса, в т.ч. по договорам абонентского
+          обслуживания. Взаимодействие с Роскомнадзором (обработка ПД),
+          ЦБ РФ (ломбарды), Роспотребнадзором, органами следствия,
+          прокуратуры (в т.ч. транспортной), иными государственными
+          и муниципальными органами.
+        </p>
+
+        <p>
+          Обеспечение транспортной безопасности (в т.ч. разработка паспорта ОТБ,
+          отчета о проведении обследования ТС по мерам от угроз АНВ и иных документов).
+          Опыт правового сопровождения лизинговой, торговой деятельности,
+          деятельности ломбардов (в т.ч. ГИИС ДМДК, 115-ФЗ),
+          ландшафтного проектирования, подряда.
+        </p>
+
+        <p>
+          Регистрация юридических лиц и ИП, изменение сведений в ЕГРЮЛ.
+          Разработка учредительных документов и локальных нормативных
+          правовых актов любой сложности. Правовое сопровождение работы отдела кадров.
+        </p>
+
+        <div class="about-features">
+          <div>
+            <strong>25+ лет</strong>
+            <span>юридической практики</span>
+          </div>
+          <div>
+            <strong>С 2013 года</strong>
+            <span>частная практика</span>
+          </div>
+          <div>
+            <strong>Вся Россия</strong>
+            <span>дистанционная работа</span>
+          </div>
+        </div>
+ 
+        <p class="about-final">
+          <strong>
+            Высокий уровень профессионализма. Индивидуальный подход. 
+            Максимальный учет ваших интересов. Гибкая ценовая политика.
+          </strong>
+        </p>
+
+      </div>
+
+      <div class="portrait">
+        <img src="photo.jpg" alt="Малова Александра Михайловна">
+        <img src="photo2.jpg" alt="Диплом">
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section class="services" id="services">
+  <div class="wrap">
+    <div class="section-head">
+      <h2>Услуги и стоимость</h2>
+      <p class="lead">
+        Стоимость юридических услуг. Подробности и условия
+        сотрудничества можно уточнить при консультации.
+      </p>
+    </div>
+
+    <div class="price-list">
+
+      <!-- Консультации -->
+      <details class="price-category" open>
+        <summary>Консультации и анализ документов</summary>
+        <div class="price-items">
+
+          <div class="price-item">
+            <span>Правовой анализ документов</span>
+            <strong>от 2 000 ₽</strong>
+          </div>
+
+          <div class="price-item">
+            <span>Устная консультация онлайн</span>
+            <strong>2 500 ₽</strong>
+          </div>
+
+          <div class="price-item">
+            <span>Устная консультация очно</span>
+            <strong>3 000 ₽</strong>
+          </div>
+
+        </div>
+      </details>
+
+      <!-- Документы -->
+      <details class="price-category">
+        <summary>Подготовка юридических документов</summary>
+        <div class="price-items">
+
+          <div class="price-item">
+            <span>Подготовка жалоб, претензий, заявлений, ходатайств, писем и иных документов правового характера</span>
+            <strong>от 3 000 ₽</strong>
+          </div>
+
+          <div class="price-item">
+            <span>Подготовка договоров, соглашений, протоколов разногласий к договорам</span>
+            <strong>от 3 000 ₽</strong>
+          </div>
+
+          <div class="price-item">
+            <span>Подготовка исковых заявлений и возражений на исковое заявление в гражданском процессе</span>
+            <strong>от 7 000 ₽</strong>
+          </div>
+
+          <div class="price-item">
+            <span>Подготовка исковых заявлений и возражений на исковое заявление в арбитражном процессе</span>
+            <strong>от 15 000 ₽</strong>
+          </div>
+
+        </div>
+      </details>
+
+      <!-- Гражданское судопроизводство -->
+      <details class="price-category">
+        <summary>Суды общей юрисдикции</summary>
+        <div class="price-items">
+
+          <div class="price-item">
+            <span>Представление интересов в суде апелляционной инстанции при участии в предыдущей инстанции</span>
+            <strong>от 8 000 ₽</strong>
+          </div>
+
+          <div class="price-item">
+            <span>Представление интересов в гражданском судопроизводстве в суде первой инстанции за 1 судодень</span>
+            <strong>от 8 000 ₽</strong>
+          </div>
+
+          <div class="price-item">
+            <span>Представление интересов в суде апелляционной инстанции без участия в предыдущей инстанции</span>
+            <strong>от 10 000 ₽</strong>
+          </div>
+
+          <div class="price-item">
+            <span>Составление апелляционной, кассационной, надзорной жалобы при участии в предыдущей инстанции</span>
+            <strong>от 10 000 ₽</strong>
+          </div>
+
+          <div class="price-item">
+            <span>Составление апелляционной, кассационной, надзорной жалобы без участия в предыдущей инстанции</span>
+            <strong>от 15 000 ₽</strong>
+          </div>
+
+          <div class="price-item">
+            <span>Представление интересов в гражданском судопроизводстве в суде первой инстанции</span>
+            <strong>от 40 000 ₽</strong>
+          </div>
+
+        </div>
+      </details>
+
+      <!-- Арбитраж -->
+      <details class="price-category">
+        <summary>Арбитражные споры и исполнительное производство</summary>
+        <div class="price-items">
+
+          <div class="price-item">
+            <span>Представление доверителя в суде апелляционной инстанции посредством ВКС при участии в предыдущей инстанции</span>
+            <strong>от 15 000 ₽</strong>
+          </div>
+
+          <div class="price-item">
+            <span>Представительство в арбитражном судопроизводстве в суде первой инстанции за 1 судодень</span>
+            <strong>от 15 000 ₽</strong>
+          </div>
+
+          <div class="price-item">
+            <span>Подготовка апелляционной, кассационной, надзорной жалобы при участии в предыдущей инстанции</span>
+            <strong>от 15 000 ₽</strong>
+          </div>
+
+          <div class="price-item">
+            <span>Участие в качестве представителя взыскателя или должника в исполнительном производстве</span>
+            <strong>от 15 000 ₽</strong>
+          </div>
+
+          <div class="price-item">
+            <span>Представление доверителя в суде апелляционной инстанции посредством ВКС без участия в предыдущей инстанции</span>
+            <strong>от 20 000 ₽</strong>
+          </div>
+
+          <div class="price-item">
+            <span>Подготовка апелляционной, кассационной, надзорной жалобы без участия в предыдущей инстанции</span>
+            <strong>от 20 000 ₽</strong>
+          </div>
+
+          <div class="price-item">
+            <span>Представительство в арбитражном судопроизводстве в суде первой инстанции</span>
+            <strong>от 70 000 ₽</strong>
+          </div>
+
+        </div>
+      </details>
+
+      <!-- Прочие услуги -->
+      <details class="price-category">
+        <summary>Дополнительные услуги и обслуживание бизнеса</summary>
+        <div class="price-items">
+
+          <div class="price-item">
+            <span>Представление интересов в государственных, муниципальных органах и иных организациях (за исключением судов)</span>
+            <strong>от 3 000 ₽</strong>
+          </div>
+
+          <div class="price-item">
+            <span>Правовое сопровождение переговоров доверителя</span>
+            <strong>от 4 000 ₽</strong>
+          </div>
+
+          <div class="price-item">
+            <span>Абонентское юридическое обслуживание</span>
+            <strong>от 20 000 ₽</strong>
+          </div>
+
+        </div>
+
+        <p class="price-note">
+          Стоимость абонентского обслуживания определяется
+          в зависимости от объема и видов услуг.
+          Представление интересов Клиента-Абонента в судах
+          в стоимость не входит.
+        </p>
+      </details>
+
+    </div>
+  </div>
+</section>
+
+<section id="cases">
+  <div class="wrap">
+    <div class="section-head">
+      <h2>Судебная практика</h2>
+    </div>
+
+    <div class="practice-list">
+    <details class="practice-card">
+    <summary>
+      <span class="practice-number">01</span>
+      <span class="practice-summary">
+        <span class="practice-category">Арендные споры</span>
+        <span class="practice-title">Отказ в иске о взыскании арендной платы</span>
+        <span class="practice-result">В иске арендодателю отказано полностью</span>
+      </span>
+      <span class="practice-toggle" aria-hidden="true"></span>
+    </summary>
+
+    <div class="practice-content">
+      <p>Клиент досрочно освободил арендуемое помещение, уведомив об этом работников арендодателя только в устной форме. Через десять месяцев арендодатель обратился в суд с иском о взыскании арендной платы и неустойки. Первоначальный анализ  с учетом судебной практики по аналогичным делам свидетельствовал о высоких рисках удовлетворения иска. Путем самостоятельного сбора и истребования через суд дополнительных доказательств нам удалось доказать в суде, что помещение сразу было сдано в субаренду другому лицу, а также что договор субаренды с клиентом в силу п. 2 ст. 618 ГК РФ был прекращен до освобождения помещения, поскольку между арендодателем и собственником помещения был расторгнут договор аренды  (о чем клиент не был уведомлен). В результате в иске арендодателю было отказано полностью.</p>
+
+      <a class="practice-link" href="https://kad.arbitr.ru/Card/3ff8ad4f-e739-4671-97db-0e6469472c00" target="_blank" rel="noopener noreferrer">Судебный акт ↗</a>
+    </div>
+    </details>
+  <details class="practice-card">
+    <summary>
+      <span class="practice-number">02</span>
+      <span class="practice-summary">
+        <span class="practice-category">Недвижимость · Споры с администрацией</span>
+        <span class="practice-title">Отказ в иске администрации г. Иркутска о приведении нежилого помещения в первоначальное состояние</span>
+        <span class="practice-result">В иске администрации отказано, взысканы расходы на экспертизу</span>
+      </span>
+      <span class="practice-toggle" aria-hidden="true"></span>
+    </summary>
+
+    <div class="practice-content">
+      <p>Администрация г. Иркутска обратилась с иском о приведении нежилого помещения, расположенного в многоквартирном доме, в первоначальное состояние. Однако перепланировка помещения клиентом не производилась, а выполнение требований администрации могло повлечь для клиента значительные издержки, а кроме того, привести к ущербу несущим конструкциям всего дома. В процессе рассмотрения дела по нашим ходатайствам была истребована архивная проектная документация дома, на основании анализа которой выявились несоответствия между ней и поэтажным планом дома, а также экспликацией помещения. В связи с этим по нашему ходатайству была проведена комплексная экспертиза, в ходе которой было установлено, что перепланировка помещения не производилась, а в технической документации на помещение и дом содержались ошибки. В результате в иске администрации г. Иркутска было отказано, также с нее были взысканы расходы на проведение экспертизы.</p>
+
+      <a class="practice-link" href="https://kad.arbitr.ru/Card/edd5f270-6fa5-4ed0-9d5c-7a9d307e0cca" target="_blank" rel="noopener noreferrer">Судебный акт ↗</a>
+    </div>
+  </details>
+
+  <details class="practice-card">
+    <summary>
+      <span class="practice-number">03</span>
+      <span class="practice-summary">
+        <span class="practice-category">Договор подряда · Проектные работы</span>
+        <span class="practice-title">Частичное удовлетворение иска о взыскании предоплаты по договору подряда на выполнение проектных работ</span>
+        <span class="practice-result">Взыскано менее 50 % предоплаты, во взыскании неустойки отказано</span>
+      </span>
+      <span class="practice-toggle" aria-hidden="true"></span>
+    </summary>
+
+    <div class="practice-content">
+      <p>Заказчик не предоставил клиенту всю необходимую документацию для проектирования и потребовал возврата предоплаты и выплаты неустойки. В суде удалось доказать, что исходная документация в полном объеме не предоставлена, а также провести строительно-техническую экспертизу, против которой возражал заказчик. Экспертиза установила факт непредоставления части исходной документации и определила процент выполненных клиентом работ по проекту. В результате суд постановил решение о взыскании менее 50 % предоплаты, а во взыскании неустойки отказал.</p>
+
+      <a class="practice-link" href="https://kad.arbitr.ru/Card/85577302-b661-4691-925b-08b315c12c73" target="_blank" rel="noopener noreferrer">Судебный акт ↗</a>
+    </div>
+  </details>
+
+  <details class="practice-card">
+    <summary>
+      <span class="practice-number">04</span>
+      <span class="practice-summary">
+        <span class="practice-category">Защита прав потребителей · Экспертизы</span>
+        <span class="practice-title">Удовлетворение иска после двух экспертиз "не в пользу" истца</span>
+        <span class="practice-result">Иск удовлетворён, решение оставлено в силе в апелляции</span>
+      </span>
+      <span class="practice-toggle" aria-hidden="true"></span>
+    </summary>
+
+    <div class="practice-content">
+      <p>Судом в деле по иску клиента о взыскании средств за некачественный мотовездеход была назначена автотехническая экспертиза, результаты которой были не в пользу клиента. По нашему ходатайству на основе рецензии и допроса эксперта судом была назначена повторная экспертиза. Однако и ее выводы были не в пользу клиента. В результате при наличии в материалах дела двух экспертных заключений «не в пользу» клиента, мы вынуждены были доказывать наличие недостатков, возникших в товаре до момента его передачи клиенту, с помощью сбора и истребования иных доказательств. После достаточно сложного и продолжительного процесса судом было вынесено решение об удовлетворении иска. В апелляции решение было оставлено в силе.</p>
+
+      <a class="practice-link" href="https://sverdlovsky.irk.sudrf.ru/modules.php?name=sud_delo&srv_num=1&name_op=doc&number=254089497&delo_id=1540005&new=0&text_number=1" target="_blank" rel="noopener noreferrer">Судебный акт ↗</a>
+    </div>
+  </details>
+
+</div>
+    </div>
+  </div>
+</section>
+
+  <section class="reviews" id="reviews">
+    <div class="wrap">
+      <div class="section-head"><h2>Отзывы клиентов</h2></div>
+      <div class="review-grid">
+        <figure class="review"><img src="review/r1.png"><figcaption><a href="https://2gis.ru/reviews/70000001035720517/review/318195046">Отзыв из 2ГИС · 17 ноября 2026</a></figcaption></figure>
+        <figure class="review"><img src="review/r2.png"><figcaption><a href="https://2gis.ru/reviews/70000001035720517/review/315210661">Отзыв из 2ГИС · 9 ноября 2026</a></figcaption></figure>
+        <figure class="review"><img src="review/r3.png"><figcaption><a href="https://2gis.ru/reviews/70000001035720517/review/304666119">Отзыв из 2ГИС · 10 октября 2026</a></figcaption></figure>
+        <figure class="review"><img src="review/r4.png"><figcaption><a href="https://2gis.ru/reviews/70000001035720517/review/295694558">Отзыв из 2ГИС · 10 сентября 2026</a></figcaption></figure>
+      </div>
+    </div>
+  </section>
+
+  <section id="contacts">
+    <div class="wrap">
+      <div class="section-head"><h2>Контакты</h2><p class="lead">Свяжитесь любым удобным способом.</p></div>
+      <div class="contacts-grid">
+        <div class="contact-list">
+          <p><strong>Телефон:</strong> <a href="tel:+79041589364">+7 (904) 158-93-64</a></p>
+          <p><strong>Почта:</strong> <a href="mailto:mam1979@yandex.ru">mam1979@yandex.ru</a></p>
+          <p><strong>Telegram:</strong> <a href="https://t.me/AlexLawIrk">@AlexLawIrk</a></p>
+          <p><strong>Адрес:</strong> г. Иркутск, ул. Помяловского, 18</p>
+<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3455.559100046513!2d104.2766276350253!3d52.23522278928767!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x5da83dcb4dc07fb3%3A0x8fd0d1cf049e4762!2z0KbQtdC90YLRgCDRjtGA0LjQtNC40YfQtdGB0LrQvtC5INC_0L7QvNC-0YnQuA!5e0!3m2!1sru!2sru!4v1795342290622!5m2!1sru!2sru" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="strict-origin-when-cross-origin"></iframe>
+      </div>
+    </div>
+  </section>
+
+<!-- <section class="feedback" id="feedback">
+  <div class="wrap">
+<script src="https://forms.yandex.ru/_static/embed.js"></script><iframe src="https://forms.yandex.ru/u/6b041ae497a37734bd6c5b56?iframe=1" frameborder="0" name="ya-form-6b041ae497a37734bd6c5b56" width="650"></iframe>
+
+    </form>
+  </div>
+</section> -->
+
+
+
+</main>
+<footer><div class="wrap">© <span id="year"></span> Малова А. М. Информация на сайте носит ознакомительный характер и не является юридическим заключением по конкретной ситуации. <br>Разработка сайта: <a href="https://t.me/dasistn3werr" target="_blank" rel="noopener">n3werr</a></div></footer>
+
+
+</body>
+</html>
